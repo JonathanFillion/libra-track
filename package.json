@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/JonathanFillion/libra-track#readme",
   "dependencies": {
-    "libra-core": "^1.0.7"
+    "express": "^4.17.1",
+    "libra-core": "^1.0.7",
+    "mustache": "^3.0.3",
+    "mustache-express": "^1.2.8"
   }
 }

@@ -1,0 +1,169 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*CUSTOM*/
+
+
+.content {
+    color: white;
+    background-color: #283140;
+    padding-bottom: 100%;
+}
+
+.search-input {
+    background-color: #283140;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    padding: 10px 300px;
+    border-radius: 30px;
+    margin: 30px 10px;
+    text-align: center;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/*IMPORTED*/
+
+.header {
+    color: white;
+    background-color: #1e1e1f;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.header .navbar-nav>li>a {
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.header .navbar {
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom:none;
+    background-color: transparent;
+    min-width: 300px;
+    border: none;
+}
+
+.header .navbar-default .navbar-nav>.open>a,
+.header .navbar-default .navbar-nav>.open>a:focus,
+.header .navbar-default .navbar-nav>.open>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header .nav>li>a:focus,
+.header .nav>li>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header .navbar-nav>li {
+    margin-right: 20px;
+}
+
+.header .navbar-nav {
+   margin-top: 12px;
+}
+
+.header .navbar-toggler {
+    /*background-color: transparent !important;*/
+    margin-top: 20px;
+    border: 1px solid #fff;
+}
+
+.header .navbar-toggler .navbar-toggler-icon {
+    /*background-color: white;*/
+}
+
+.header .navbar-brand {
+    color: white;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header .navbar-brand:hover {
+    color: #ccc;
+}
+
+.content .main {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+
+.content .main h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 36px;
+}
+
+
+.content .main p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 22px;
+    max-width: 660px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.header .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fffbfb !important;
+    outline:none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 18px 24px;
+    transition:0.2s background-color;
+}
+
+.header .btn-primary:hover {
+    background-color:rgba(255,255,255,0.1);
+}
+
+.header .btn-primary:active {
+    transform:translateY(1px);
+}
+
+@media screen and (max-width: 767px) {
+
+    .header .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .header .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+        color: #ccc;
+    }
+
+    .header .navbar-collapse {
+        margin-left: 20px;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .header .main{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .header .main h1{
+        font-size: 42px;
+    }
+}
