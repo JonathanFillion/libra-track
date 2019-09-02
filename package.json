@@ -1,0 +1,22 @@
+{
+  "name": "libra-track",
+  "version": "1.0.0",
+  "description": "libra tracking software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanFillion/libra-track.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanFillion/libra-track/issues"
+  },
+  "homepage": "https://github.com/JonathanFillion/libra-track#readme",
+  "dependencies": {
+    "libra-core": "^1.0.7"
+  }
+}
