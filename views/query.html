@@ -32,13 +32,10 @@
     </div>
     <div class="content">
         <div class="main container">
-            <h2>Query the libra blockchain</h2>
-            <div class="input">
-                <form method="post" action="/query">
-                    <div><input id="search" type="text" placeholder="Address" name="search" value="" spellcheck="false" class="search-input"></div>
-                    <div><input type="submit" value="submit"></div>
-                </form>
-            </div>
+            <div>{{accountPublicAddress}}</div>
+            <div>{{accountBalance}}</div>
+            <div>{{sentEventsCount}}</div>
+            <div>{{receivedEventsCount}}</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
