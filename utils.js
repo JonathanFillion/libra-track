@@ -40,6 +40,10 @@ var remvDupZero = function(str) {
     }
 }
 
+var formatNumber(str) {
+       return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'))
+}
+
 var isValidAddress = function(address) {
 	if(address == "") {
 		return false;
