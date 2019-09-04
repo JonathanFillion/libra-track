@@ -20,14 +20,10 @@ var getAccountByAddress = function(address, callback) {
 }
 
 var convertBigNumberCorrectly = function(bigstring){
-	console.log(bigstring)
-	console.log(bigstring.length)
-	decPart = remvDupZero(bigstring.substring( bigstring.length - 6, bigstring.length))
-        toAppend = "." + decPart
-        if(!decPart.length){
-            toAppend = ""
-        }
-        toPrepend = bigstring.substring(0, bigstring.length - 6)
+	console.log(bigstring);
+	console.log(bigstring.length);
+	toAppend = remvDupZero(bigstring.substring( bigstring.length - 6, bigstring.length));
+        toPrepend = bigstring.substring(0, bigstring.length - 6);
         
         temp = toPrepend + toAppend;
 	return temp;
@@ -36,7 +32,7 @@ var remvDupZero = function(str) {
     if(str.match("^0*")) {
         return "";
     } else {
-        return str;
+        return "." + str;
     }
 }
 
