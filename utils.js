@@ -33,7 +33,7 @@ var convertBigNumberCorrectly = function(bigstring){
 	return temp;
 }
 var remvDupZero = function(str) {
-    if(str.match("")) {
+    if(str.match("^0*")) {
         return "";
     } else {
         return str;
