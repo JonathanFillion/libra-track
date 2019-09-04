@@ -23,7 +23,7 @@ var convertBigNumberCorrectly = function(bigstring){
 	console.log(bigstring);
 	console.log(bigstring.length);
 	toAppend = remvDupZero(bigstring.substring( bigstring.length - 6, bigstring.length));
-        toPrepend = bigstring.substring(0, bigstring.length - 6);
+        toPrepend = formatNumber(bigstring.substring(0, bigstring.length - 6));
         
         temp = toPrepend + toAppend;
 	return temp;
