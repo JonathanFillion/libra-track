@@ -22,8 +22,22 @@ var getAccountByAddress = function(address, callback) {
 var convertBigNumberCorrectly = function(bigstring){
 	console.log(bigstring)
 	console.log(bigstring.length)
-	bigstring = bigstring.substring(0, bigstring.length - 6) + "," + bigstring.substring( bigstring.length - 6, bigstring.length)
-	return bigstring;
+	decPart = remvDupZero(bigstring.substring( bigstring.length - 6, bigstring.length))
+        toAppend = "." + decPart
+        if(!decPart.length){
+            toAppend = ""
+        }
+        toPrepend = bigstring.substring(0, bigstring.length - 6)
+        
+        temp = toPrepend + toAppend;
+	return temp;
+}
+var remvDupZero = function(str) {
+    if(str.match("")) {
+        return "";
+    } else {
+        return str;
+    }
 }
 
 var isValidAddress = function(address) {
