@@ -59,6 +59,10 @@ var fetchBlockchainByAddress = async function(address) {
 	return account;
 }
 
+var restcallAccount = function() {
+    return fetchBlockchainByAddress()
+}
+
 
 module.exports = {
 	getAccountByAddress
