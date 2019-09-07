@@ -28,13 +28,25 @@ app.get('/query', (req, res) => {
 app.get('/news', (req, res) => {
 	res.render('news')
 });
-app.get('/api', (req, res) => {
+app.get('/restapi', (req, res) => {
 	res.render('api')
 });
 app.get('/test', (req, res) => {
 
 });
 
+app.get('/api/getaddress', (req,res) => {
+    
+})
+
+app.get('/api/getaddresstransactions', (req,res) => {
+
+})
+
+
+app.get('/api/gettransaction', (req,res) => {
+
+})
 
 
 

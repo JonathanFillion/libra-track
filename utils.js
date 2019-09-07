@@ -35,8 +35,24 @@ var fetchTransactions = async function(add, seq, callback) {
 }
 
 var convertBigNumberCorrectly = function(bigstring){
-	bigstring = bigstring.substring(0, bigstring.length - 6) + "," + bigstring.substring( bigstring.length - 6, bigstring.length)
-	return bigstring;
+	console.log(bigstring);
+	console.log(bigstring.length);
+	toAppend = remvDupZero(bigstring.substring( bigstring.length - 6, bigstring.length));
+        toPrepend = formatNumber(bigstring.substring(0, bigstring.length - 6));
+        
+        temp = toPrepend + toAppend;
+	return temp;
+}
+var remvDupZero = function(str) {
+    if(str.match("^0*")) {
+        return "";
+    } else {
+        return "." + str;
+    }
+}
+
+var formatNumber(str) {
+       return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'))
 }
 
 var isValidAddress = function(address) {
@@ -56,6 +72,10 @@ var isValidAddress = function(address) {
 var fetchBlockchainByAddress = async function(address) {
 	const account = await client.getAccountState(address);
 	return account;
+}
+
+var restcallAccount = function() {
+    return fetchBlockchainByAddress()
 }
 
 
