@@ -6,22 +6,35 @@ var getAccountByAddress = function(address, callback) {
 	if(isValidAddress(address)) {
 		var account = fetchBlockchainByAddress(address)
 		account.then(function(acc){
-			console.log(acc)
 			var retval = {
 				"accountAddress": address,
 				"accountBalance": convertBigNumberCorrectly(acc.balance.toString()),
 				"sequenceNumber": acc.sequenceNumber.toString(),
 				"sentEventsCount": acc.sentEventsCount.toString(),
-				"receivedEventsCount": acc.receivedEventsCount.toString()
+				"receivedEventsCount": acc.receivedEventsCount.toString(),
+				"transactionArray": []
 			}
+			console.log(address, " ", acc.sequenceNumber.toNumber())
+			var transactionList = fetchTransactions(address, 1)
+			transactionList.then(function(tl) {
+
+			})
+
+
 			callback(retval)
 		})
 	}
 }
 
+var fetchTransactions = async function(add, seq, callback) {
+	tl = await client.getAccountTransaction(add, seq)
+	console.log(tl) 
+
+
+	return null;
+}
+
 var convertBigNumberCorrectly = function(bigstring){
-	console.log(bigstring)
-	console.log(bigstring.length)
 	bigstring = bigstring.substring(0, bigstring.length - 6) + "," + bigstring.substring( bigstring.length - 6, bigstring.length)
 	return bigstring;
 }

@@ -2,118 +2,169 @@
 <html>
 
 <head>
-    <title>Libra Trace</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <title>Libra Trace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Libra Trace</a>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="headerNavbar">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">SEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/news">NEWS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/api">API</a></li>
-                    </ul>
-                </div>
+  <div class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Libra Trace</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="headerNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">SEARCH</a></li>
+            <li class="nav-item"><a class="nav-link" href="/news">NEWS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/api">API</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="main container">
+      <div class="row">
+        <div class="ml-3 mb-2"><h3>Account Details</h3></div>
+      </div>
+      <div class="row">
+        <div class="ml-3 mb-2 mt-2"><h6>{{accountAddress}}</h6></div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-lg-6 col-xl-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h6 class="card-title">Balance</h6>
+              <b>{{accountBalance}}</b>
             </div>
-        </nav>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-xl-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h6 class="card-title">Sequence Number</h6>
+              <b>{{sequenceNumber}}</b>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-xl-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h6 class="card-title">Sent Events Count</h6>
+              <b>{{sentEventsCount}}</b>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-xl-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h6 class="card-title">Received Events Count</h6>
+              <b>{{receivedEventsCount}}</b>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">From</th>
+            <th scope="col">Sent</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="content">
+  </div>
+  <div class="separator-container">
+        <div class="container">
+            <div class="separator"></div>
+        </div>
+    </div>
+
+    <div class="extra">
         <div class="main container">
             <div class="row">
-                <div class="ml-3 mb-2"><h4>Account Details</h4></div>
-            </div>
-            <div class="row">
-                <div class="ml-3 mb-2"><h6>{{accountAddress}}</h6></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-xl-3 mb-4">
-                    <div class="card h-100 bg-dark">
-                        <div class="card-body">
-                            <h6 class="card-title">Balance</h6>
-                            <b>{{accountBalance}}</b>
-                        </div>
-                    </div>
-
+                <div class="col-md-4 text-center">
+                    <div class="mb-3"><h4>Libra Links</h4></div>
+                    <ul class="list-unstyled linklist">
+                        <li><a target="_blank" class="extralink" href="https://libra.org/en-US/">Libra Homepage</a></li>
+                        <li><a target="_blank" class="extralink" href="https://libra.org/en-US/vision/">Libra Vision</a></li>
+                        <li><a target="_blank" class="extralink" href="https://libra.org/en-US/association/">Libra Association</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                    <div class="card h-100 bg-dark">
-                        <div class="card-body">
-                            <h6 class="card-title">Sequence Number</h6>
-                            <b>{{sequenceNumber}}</b>
-                        </div>
+                <div class="col-md-4 text-center">
+                    <div class="mb-3"><h4>Community Links</h4></div>
+                    <div>
+                        <ul class="list-unstyled linklist">
+                            <li><a target="_blank" class="extralink" href="https://community.libra.org/">Official Libra</a></li>
+                            <li><a target="_blank" class="extralink" href="https://www.reddit.com/r/libra/">Libra Reddit</a></li>
+                            <li><a target="_blank" class="extralink" href="https://bitcointalk.org/">Bitcointalk</a></li>
+                        </ul>
                     </div>
-
                 </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                    <div class="card h-100 bg-dark">
-                        <div class="card-body">
-                            <h6 class="card-title">Sent Events Count</h6>
-                            <b>{{sentEventsCount}}</b>
-                        </div>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <div  class="mb-3"><h4>Developer Links</h4></div>
 
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                    <div class="card h-100 bg-dark">
-                        <div class="card-body">
-                            <h6 class="card-title">Received Events Count</h6>
-                            <b>{{receivedEventsCount}}</b>
-                        </div>
-                    </div>
+                    <div>
+                        <ul class="list-unstyled linklist">
 
+                            <li><a target="_blank" class="extralink" href="https://developers.libra.org/docs/welcome-to-libra">Getting Started With Libra</a></li>
+                            <li><a target="_blank" class="extralink" href="https://developers.libra.org/docs/move-overview">Move Documentation</a></li>
+                            <li><a target="_blank" class="extralink" href="https://hackerone.com/libra">Official Libra Bugbounty</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-
-            <table class="table table-dark">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-              </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-          </tr>
-          <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-          </tr>
-          <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-          </tr>
-      </tbody>
-  </table>
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/init.js"></script>
+        </div>
+    </div>
+    <footer class="page-footer font-small footer">
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="https://libratrace.net">libratrace.net</a>
+    </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/init.js"></script>
 </body>
 
 </html>

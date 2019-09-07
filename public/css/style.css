@@ -1,19 +1,40 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+
 }
+
 
 /*CUSTOM*/
 
-
-.content {
-    color: white;
-    background-color: #283140;
-    padding-bottom: 100%;
+.linklist > li {
+    margin-bottom: 5px;
 }
 
+.content {
+    color: #003667;
+    background-color: #f1efef;
+    padding-bottom: 100px;
+}
+
+.extra {
+    background-color: #f1efef;
+    padding-bottom: 1%;
+
+}
+
+.separator-container {
+    background-color: #f1efef;
+}
+
+.separator {
+    padding: 10px 10px;
+    background-color: #f1efef;
+    border-top: 1px solid #666262;
+}
 .search-input {
     background-color: #283140;
-    color: white;
+    color: #003667;
     border: 1px solid white;
     font-size: 16px;
     padding: 10px 300px;
@@ -99,7 +120,7 @@ textarea:focus, input:focus{
 }
 
 .content .main {
-    text-align: center;
+    text-align: left;
     padding-top: 80px;
     margin-bottom: 100px;
 }
@@ -139,6 +160,15 @@ textarea:focus, input:focus{
 
 .header .btn-primary:active {
     transform:translateY(1px);
+}
+
+.footer {
+    background-color: #283140;
+    color: white;
+}
+
+.footer > div >a:link {
+    color: white;
 }
 
 @media screen and (max-width: 767px) {
