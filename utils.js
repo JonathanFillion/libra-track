@@ -43,11 +43,13 @@ var decorticateTransaction = function(ts) {
 
 }
 
-async function fetchTransactions(add, seqmax, startp,callback) {
+async function fetchTransactions(add,seqmax,tsOffset,callback) {
 	let tl = []
-	var calcStart = ((seqmax - 1) - startp);
+	var calcStart = ((seqmax - 1) - tsOffset);
 	var endPoint = calcStart - 25;
-	/*Check startp seqmax assert ><*/
+	
+        if(calcStart < 0 || endPoint < 0 || tsOffset < 0) return []
+
 	for(var i = calcStart ; i > endPoint; i--) {
 		await sleep(10)
 		t = await client.getAccountTransaction(add, i)
