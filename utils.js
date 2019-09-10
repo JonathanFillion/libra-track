@@ -28,7 +28,7 @@ var getAccountByAddress = function(address,tsOffset,callback) {
 
 
 var decorticateTransaction = function(ts) {
-
+	console.log()
 	var cleanedTransaction = {
 		"transactionCode": ts.signedTransaction.transaction.program.code.toString(),
 		"transactionArgs": ts.signedTransaction.transaction.program.arguments.toString(),
