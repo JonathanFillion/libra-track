@@ -2,7 +2,7 @@ let sleep = require('util').promisify(setTimeout);
 const libra = require('libra-core')
 const client = new libra.LibraClient({ network: libra.LibraNetwork.Testnet });
 
-var getAccountByAddress = function(address, callback) {
+var getAccountByAddress = function(address,tsOffset,callback) {
 	if(isValidAddress(address)) {
 		var account = fetchBlockchainByAddress(address)
 		account.then(function(acc){
@@ -15,9 +15,8 @@ var getAccountByAddress = function(address, callback) {
 				"transactionArray": []
 			}
 			var maxseq = acc.sequenceNumber.toNumber();
-			var sp = 0;
-
-			fetchTransactions(address, maxseq, sp, function(tl){
+			
+			fetchTransactions(address, maxseq, tsOffset, function(tl){
 				console.log("fin " + tl.length)
 				callback(retval)
 			})
@@ -31,13 +30,13 @@ var getAccountByAddress = function(address, callback) {
 var decorticateTransaction = function(ts) {
 
 	var cleanedTransaction = {
-		"transactionCode": tl.signedTransaction.transaction.program.code.toString(),
-		"transactionArgs": tl.signedTransaction.transaction.program.arguments.toString(),
-		"gasUnitPrice": tl.signedTransaction.transaction.gasContraint,
-		"maxGas": tl.signedTransaction.transaction.maxGasAmount,
-		"expirationTime": tl.signedTransaction.transaction.expirationTime,
-		"senderAddress": tl.signedTransaction.transaction.sendersAddress.addressBytes,
-		"transactionSequenceNumber": tl.signedTransaction.transaction.sequenceNumber,
+		"transactionCode": ts.signedTransaction.transaction.program.code.toString(),
+		"transactionArgs": ts.signedTransaction.transaction.program.arguments.toString(),
+		"gasUnitPrice": ts.signedTransaction.transaction.gasContraint,
+		"maxGas": ts.signedTransaction.transaction.maxGasAmount,
+		"expirationTime": ts.signedTransaction.transaction.expirationTime,
+		"senderAddress": ts.signedTransaction.transaction.sendersAddress.addressBytes,
+		"transactionSequenceNumber": ts.signedTransaction.transaction.sequenceNumber,
 		"": "",
 
 	}
